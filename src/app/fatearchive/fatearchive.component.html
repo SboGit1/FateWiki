@@ -1,0 +1,15 @@
+<div class="container-fluid d-flex flex-wrap">
+    
+    <div *ngFor="let html_fate of fate_team">
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{{ html_fate.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ html_fate.Name }}</h5>
+            <p class="card-text">{{ html_fate.Class }}</p>
+            <p class="card-text">Servant ID: {{ html_fate.id }}</p>
+            <a href="#" class="btn btn-{{ html_fate.button }}">View Ascensions</a>
+            </div>
+        </div>
+    </div>
+</div>
