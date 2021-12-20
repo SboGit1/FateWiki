@@ -6,32 +6,26 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface TableItem {
-  name: string;
-  id: number;
+  weak: string;
+  class: string;
+  strong: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TableItem[] = [
-  {id: "Saber", name: 'Hydrogen'},
-  {id: "Archer", name: 'Helium'},
-  {id: "Lancer", name: 'Lithium'},
-  {id: "Assassin", name: 'Beryllium'},
-  {id: "Caster", name: 'Boron'},
-  {id: "Berserker", name: 'Carbon'},
-  {id: "Rider", name: 'Nitrogen'},
-  {id: "Mooncancer", name: 'Oxygen'},
-  {id: "Foreigner", name: 'Fluorine'},
-  {id: "Alter-Ego", name: 'Neon'},
-  {id: "Ruler", name: 'Sodium'},
-  {id: "Avenger", name: 'Magnesium'},
-  {id: "Pretender", name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {class: 'Saber', weak: 'Archer', strong: 'Lancer'},
+  {class: 'Archer', weak: 'Lancer', strong: 'Saber'},
+  {class: 'Lancer', weak: 'Saber', strong: 'Archer'},
+  {class: 'Assassin', weak: 'Caster', strong: 'Rider'},
+  {class: 'Caster', weak: 'Rider', strong: 'Assassin'},
+  {class: 'Berserker', weak: 'Everything', strong: 'Everything except Foreigner'},
+  {class: 'Rider', weak: 'Assassin', strong: 'Caster'},
+  {class: 'Mooncancer', weak: 'Ruler', strong: 'Avenger'},
+  {class: 'Foreigner', weak: 'Alter-Ego', strong: 'Berserker'},
+  {class: 'Alter-Ego', weak: 'Pretender', strong: 'Foreigner'},
+  {class: 'Ruler', weak: 'Avenger', strong: 'Mooncancer'},
+  {class: 'Avenger', weak: 'Mooncancer', strong: 'Ruler'},
+  {class: 'Pretender', weak: 'Foreigner', strong: 'Alter-Ego'}
 ];
 
 /**
@@ -97,8 +91,9 @@ export class TableDataSource extends DataSource<TableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'weak': return compare(a.weak, b.weak, isAsc);
+        case 'class': return compare(+a.class, +b.strong, isAsc);
+        case 'strong': return compare(+a.strong, +b.strong, isAsc);
         default: return 0;
       }
     });
