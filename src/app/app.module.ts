@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { FatearchiveComponent } from './fatearchive/fatearchive.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { TestingComponent } from './testing/testing.component';
 import { BottombarComponent } from './bottombar/bottombar.component';
-import { SideSideBarComponent } from './side-side-bar/side-side-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { SideSideBarComponent } from './side-side-bar/side-side-bar.component';
     FatearchiveComponent,
     NavbarComponent,
     SidebarComponent,
-    TestingComponent,
     BottombarComponent,
-    SideSideBarComponent
+    TableComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
