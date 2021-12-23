@@ -18,7 +18,7 @@ const EXAMPLE_DATA: TableItem[] = [
   {class: 'Lancer', weak: 'Saber', strong: 'Archer'},
   {class: 'Assassin', weak: 'Caster', strong: 'Rider'},
   {class: 'Caster', weak: 'Rider', strong: 'Assassin'},
-  {class: 'Berserker', weak: 'Everything', strong: 'Everything except Foreigner'},
+  {class: 'Berserker', weak: 'Everything', strong: 'Non-Foreigner'},
   {class: 'Rider', weak: 'Assassin', strong: 'Caster'},
   {class: 'Mooncancer', weak: 'Ruler', strong: 'Avenger'},
   {class: 'Foreigner', weak: 'Alter-Ego', strong: 'Berserker'},
@@ -91,8 +91,8 @@ export class TableDataSource extends DataSource<TableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
-        case 'weak': return compare(a.weak, b.weak, isAsc);
-        case 'class': return compare(+a.class, +b.strong, isAsc);
+        case 'class': return compare(a.class, b.class, isAsc);
+        case 'weak': return compare(+a.weak, +b.weak, isAsc);
         case 'strong': return compare(+a.strong, +b.strong, isAsc);
         default: return 0;
       }
