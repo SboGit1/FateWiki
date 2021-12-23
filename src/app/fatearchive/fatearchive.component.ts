@@ -3,63 +3,75 @@ import { Component, OnInit } from '@angular/core';
 const fate=
 [{
   "Name": "Mash",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2019-01/001_Mash_4Star.png?itok=V6S2QSKz",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2020-03/Mash%20Kyrielight_Orthenaus.png",
   "id": 1,
   "Class": "Shielder",
   "button": "danger"
 }, {
   "Name": "Artoria",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/artoria.png?itok=ojIGxs55",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/Artoria4.png",
   "id": 2,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Artoria Alter",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/VSowRz8.png?itok=N3tEcEre",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/Alter4.png",
   "id": 3,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Artoria Lily",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/004%20Altria%20Pendragon%20%28Lily%29%20icon.png?itok=aWCZcwx5",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/004%20Altria%20Pendragon%20%28Lily%29%204.png",
   "id": 4,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Nero Claudius",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/005%20Nero%20Claudius%20icon.png?itok=ymXg884l",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/005%20Nero%20Claudius%204.png",
   "id": 5,
   "Class": "Saber",
   "button": "primary"
 }, {
   "Name": "Siegfried",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/006%20Siegfried%20icon.png?itok=-XzJfxvX",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/006%20Siegfried%201.png",
   "id": 6,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Julis Caesar",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/007%20Gaius%20Julius%20Caesar%20icon.png?itok=YXJP3t29",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/007%20Gaius%20Julius%20Caesar%201.png",
   "id": 7,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Altera",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/008%20Altera%20icon.png?itok=61NAxrbV",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/008%20Altera%204.png",
   "id": 8,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Giles De Rais",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2017-07/009%20Gilles%20de%20Rais%20%28Saber%29%20icon.png?itok=rwSOXQ5J",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/009%20Gilles%20de%20Rais%20%28Saber%29%204.png",
   "id": 9,
   "Class": "Saber",
   "button": "danger"
 }, {
   "Name": "Chevalier D'Eon",
-  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/styles/width50px/public/2019-12/010%20Chevalier%20dEon%20icon.png?itok=WThQXfUQ",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/010%20Chevalier%20d%27Eon%204.png",
   "id": 10,
   "Class": "Saber",
+  "button": "danger"
+}, {
+  "Name": "EMIYA",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/011%20EMIYA%201.png",
+  "id": 11,
+  "Class": "Archer",
+  "button": "danger"
+}, {
+  "Name": "Gilgamesh",
+  "image": "https://gamepress.gg/grandorder/sites/grandorder/files/2017-07/012%20Gilgamesh%201.png",
+  "id": 11,
+  "Class": "Archer",
   "button": "danger"
 }]
 
